@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+$gray: #6c6e6c;
+$light-gray: #dcdcdc;
+$white: #ffffff;
+$black: #000000;
+$blue: #10afc5;
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+html{
+    background-color: $light-gray;
+}
+
+header{
+    height: 10vh;
+}
+
+nav{
+    height: 100%;
+    width: 100%;
+    .nav-list{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+
+        li{
+            display: flex;
+            align-items: center;
+        }
+
+        img{
+            height: 100%;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        a{
+            font-size: 1.3rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            color: $black;
+            transition: 500ms;
+
+            &:hover{
+                color: $blue;
+                transition: 500ms;
+            }
+        }
+    }
+
+
+}
+
+.container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    &-form, &-img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+    }
+}
+
+.container-form{
+    color: $white;
+    .container-browser{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: $gray;
+            font-size: 3rem;
+            letter-spacing: 0.2rem;
+            span{
+                text-align: center;
+                display: block;
+            }
+        }
+        form{
+            display: grid;
+            justify-items: center;
+            width: 100%;
+            margin: 1rem;
+            
+            label{
+                letter-spacing: 0.2rem;
+                color: black;
+                font-size: 1.2rem;
+                span{
+                    display: block;
+                    margin: {
+                        left: 0.5rem;
+                    }
+                }
+                border-left: {
+                    style: solid;
+                    color: black;
+                    width: 0.2rem;
+                }
+            }
+
+            input{
+                margin: 0.5rem;
+                width: 40%;
+                background: $white; 
+                outline: none;
+                padding: 0.5rem;
+                font-size: 1.1rem;
+                border: {
+                    width: 0.1rem;
+                    radius: 1rem;
+                    style: solid;
+                    color: $gray ;
+
+                }   
+            }
+        }
+    }
+
+    .container-rta{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.container-img{
+    img{
+        height: 90%;
+    }
+}
