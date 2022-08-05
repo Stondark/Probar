@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
-$gray: #6c6e6c;
-$light-gray: #dcdcdc;
+$gray: #A9A9A9;
+$light-gray: #D0D2D0;
 $white: #ffffff;
 $black: #000000;
-$blue: #10afc5;
+$blue: #00a5be;
 
 *{
     margin: 0;
@@ -12,11 +12,18 @@ $blue: #10afc5;
 }
 
 html{
-    background-color: $light-gray;
+    background-color: $blue;
 }
 
 header{
     height: 10vh;
+    position: relative;
+    z-index: 2;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
 }
 
 nav{
@@ -50,7 +57,7 @@ nav{
             transition: 500ms;
 
             &:hover{
-                color: $blue;
+                color: $white;
                 transition: 500ms;
             }
         }
@@ -61,12 +68,14 @@ nav{
 
 .container{
     width: 100%;
-    height: 90vh;
+    height: 90%;
     display: flex;
     margin: 0 auto;
     overflow: hidden;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 2;
     &-form, &-img{
         width: 100%;
         height: 100%;
@@ -88,7 +97,7 @@ nav{
         justify-content: center;
         align-items: center;
         h1{
-            color: $gray;
+            color: $black;
             font-size: 3rem;
             letter-spacing: 0.2rem;
             span{
@@ -146,6 +155,57 @@ nav{
 
 .container-img{
     img{
+        width: 80%;
         height: 90%;
     }
 }
+
+.name-background{
+    color: rgba(0,0,0, .1);
+    font-size: 60vh;
+    position: absolute;
+    text-transform: uppercase;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    letter-spacing: 0.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.line-aside{
+    transform-origin: left top;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 2rem;
+    bottom: 0;
+    width: 100vh;
+    text-align: center;
+    
+        & .text{
+            display: inline-flex;
+            padding: 0 20px;
+        }
+
+        .dot{
+            width: 5px;
+            height: 5px;
+            background-color: $black;
+            border-radius: 50%;
+            display: inline-flex;
+            margin: 0 10px;
+        }
+        
+        .line{
+            width: 90px;
+            height: 3px;
+            background-color: $black;
+            display: inline-flex;
+            // transform: translateY(-3px);
+        }
+}
+
